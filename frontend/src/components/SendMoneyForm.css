@@ -1,0 +1,13 @@
+.submit-button {
+  width: 100%;
+}
+
+.error-message {
+  color: var(--danger-color);
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: var(--success-color);
+  margin-bottom: 1rem;
+}

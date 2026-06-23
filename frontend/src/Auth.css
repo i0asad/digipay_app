@@ -1,0 +1,81 @@
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  text-align: center;
+}
+
+.error-message {
+  color: var(--danger-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: var(--success-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.field-error {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.auth-toggle-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.auth-toggle-text {
+  font-size: 0.875rem;
+}
+
+.auth-toggle-link {
+  color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-primary);
+}

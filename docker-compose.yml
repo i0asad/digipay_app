@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: digipay_user
+      POSTGRES_PASSWORD: digipay_password
+      POSTGRES_DB: digipay_db
+    ports:
+      - "5433:5432"
+
+  backend:
+    build: ./digipay
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/digipay_db
+      - SPRING_DATASOURCE_USERNAME=digipay_user
+      - SPRING_DATASOURCE_PASSWORD=digipay_password
+      - JWT_SECRET=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
